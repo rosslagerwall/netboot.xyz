@@ -1,0 +1,7 @@
+#!ipxe
+
+imgfree
+kernel http://rossla-pc.uk.xensource.com/ross/netboot/xen dom0_max_vcpus=1-16 dom0_mem=max:8192M com1=115200,8n1 console=com1,vga
+module http://rossla-pc.uk.xensource.com/ross/netboot/vmlinuz console=hvc0 console=tty0
+module http://rossla-pc.uk.xensource.com/ross/netboot/install.img
+boot

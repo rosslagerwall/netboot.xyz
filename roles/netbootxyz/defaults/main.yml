@@ -1,10 +1,10 @@
-boot_domain: boot.netboot.xyz
+boot_domain: rossla-pc.uk.xensource.com/ross/netbootxyz
 boot_timeout: 300000
 boot_version: 2.x
 bootloader_disks:
 - netboot.xyz
 bootloader_http_enabled: true
-bootloader_https_enabled: true
+bootloader_https_enabled: false
 bootloaders:
   arm:
   - desc: DHCP EFI boot image file, uses built-in iPXE NIC drivers
@@ -87,19 +87,19 @@ generate_disks: true
 generate_disks_arm: false
 generate_disks_efi: true
 generate_disks_hybrid: false
-generate_disks_legacy: true
+generate_disks_legacy: false
 generate_disks_linux: false
 generate_disks_rpi: false
 generate_local_vars: true
 generate_menus: true
 generate_signatures: false
 generate_version_file: true
-ipxe_branch: master
+ipxe_branch: mb2_uefi
 ipxe_ca_filename: ca-ipxe-org.crt
 ipxe_ca_url: http://ca.ipxe.org/ca.crt
 ipxe_debug_enabled: false
 ipxe_debug_options: httpcore,tls
-ipxe_repo: https://github.com/ipxe/ipxe
+ipxe_repo: https://github.com/rosslagerwall/ipxe
 ipxe_source_dir: /usr/src/ipxe
 kernel_params: initrd=initrd.magic ${cmdline}
 live_endpoint: https://github.com/netbootxyz
@@ -401,6 +401,10 @@ releases:
       7: /repo/OracleLinux/OL7/latest
       8: /repo/OracleLinux/OL8/baseos/latest
       9: /repo/OracleLinux/OL9/baseos/latest
+  xenserver:
+    enabled: true
+    menu: linux
+    name: XenServer
   photon:
     enabled: true
     menu: linux
